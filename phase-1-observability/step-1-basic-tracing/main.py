@@ -2,10 +2,14 @@
 This script loads environment variables from a .env file and prints the value of LANGCHAIN_TRACING_V2.
 """
 
-import os
 from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
 
 load_dotenv()
 
-print("Environment variables loaded successfully.")
-print(f"LANGCHAIN_TRACING_V2: {os.getenv('LANGCHAIN_TRACING_V2')}")
+# Initialize the chat model
+llm = ChatOpenAI(model="gpt-5.6-luna")
+
+# Invoke the model with prompt
+response = llm.invoke("¿Hola, cómo estás?")
+print(response.content)
