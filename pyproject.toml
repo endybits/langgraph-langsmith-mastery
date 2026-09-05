@@ -1,0 +1,23 @@
+[project]
+name = "langgraph-langsmith-mastery"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Endybits", email = "endyb.dev@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.4.0",
+    "langchain-openai>=1.6.0",
+    "langgraph>=1.2.11",
+    "langsmith>=0.12.1",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+langgraph-langsmith-mastery = "langgraph_langsmith_mastery:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
