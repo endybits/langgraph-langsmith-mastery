@@ -1,5 +1,6 @@
 """
-This script loads environment variables from a .env file and prints the value of LANGCHAIN_TRACING_V2.
+This script runs a llm invocation to test the first time
+of LS tracing with a simple unique run.
 """
 
 from dotenv import load_dotenv
